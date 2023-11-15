@@ -1,0 +1,110 @@
+// start best-product
+.best-product {
+    position: relative;
+
+    .container {
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 100px;
+            top: 0;
+            width: 40px;
+            height: 100%;
+            background-color: $mainColor;
+            transform: skewX(40deg);
+            z-index: -11;
+            transition: all .3s linear;
+
+            @include breakpoints(mobile) {
+                display: none;
+            }
+
+            @include breakpoints(tablet) {
+                display: none;
+            }
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 200px;
+            top: 0;
+            width: 40px;
+            height: 100%;
+            background-color: $mainColor;
+            transform: skewX(40deg);
+            z-index: -11;
+            transition: all .3s linear;
+
+            @include breakpoints(mobile) {
+                display: none;
+            }
+
+            @include breakpoints(tablet) {
+                display: none;
+            }
+        }
+
+        &:hover::after {
+            left: 100px;
+        }
+
+        &:hover::before {
+            left: 200px;
+        }
+    }
+
+    &_info {
+        display: flex;
+        align-items: center;
+
+        @include breakpoints (mobile) {
+            flex-direction: column;
+        }
+
+        @include breakpoints(tablet) {
+            flex-direction: column;
+        }
+
+        @include breakpoints(notebook) {
+            flex-direction: column;
+        }
+
+
+        & img {
+
+            @include breakpoints(mobile) {
+                width: 100%;
+            }
+        }
+
+        &_desc {
+            &_title {
+                font-size: 50px;
+                margin-bottom: 0;
+            }
+
+            &_details {
+                font-size: 20px;
+                margin-top: 7px;
+            }
+
+            &_btn-shop {
+                color: #fff;
+                font-weight: 600;
+                text-transform: capitalize;
+                background-color: $mainColor;
+                padding: 10px 20px;
+                border-radius: 20px;
+                display: block;
+                margin-top: 30px;
+                width: max-content;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+// end best-product

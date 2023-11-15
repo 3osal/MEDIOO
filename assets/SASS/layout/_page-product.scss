@@ -1,0 +1,61 @@
+.product-details {
+    margin-top: 100px;
+
+    &_boxs {
+        display: flex;
+        gap: 20px;
+        align-items: flex-start;
+
+        @include breakpoints(mobile) {
+            flex-direction: column;
+        }
+
+        @include breakpoints(tablet) {
+            flex-direction: column;
+        }
+
+        &_image {
+            img {
+                width: 300px;
+
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+        }
+
+        &_info {
+            &_desc {
+                font-size: 20px;
+                text-transform: uppercase;
+                margin-bottom: 25px;
+                color: $textcolor;
+            }
+
+            &_data {
+                display: flex;
+                align-items: center;
+                padding: 7px 10px;
+                gap: 10px;
+                color: #fff;
+                text-transform: uppercase;
+
+                img {
+                    width: 20px;
+                }
+            }
+
+            &_price {
+                color: $offers;
+                display: block;
+                font-size: 20px;
+                font-weight: 600;
+                padding: 7px 10px;
+
+                &_country {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,10 @@
+//scroll
+.scroller {
+    background-color: $mainColor;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 222;
+    width: 0px;
+    height: 5px;
+}

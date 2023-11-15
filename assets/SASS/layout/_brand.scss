@@ -1,0 +1,21 @@
+.brands {
+    margin-top: 100px;
+
+    &_item {
+        display: grid;
+        grid-template-columns: repeat(8, auto);
+
+        @include breakpoints(mobile) {
+            grid-template-columns: repeat(2, auto);
+        }
+
+        &_image {
+            display: block;
+            max-width: max-content;
+
+            & img {
+                width: 80px;
+            }
+        }
+    }
+}

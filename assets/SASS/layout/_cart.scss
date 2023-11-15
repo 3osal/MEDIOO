@@ -1,0 +1,92 @@
+.cart {
+    width: 300px;
+    height: auto;
+    margin: 50px auto;
+    background-color: #131313;
+    padding: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+
+    &_info {
+        &_title {
+            max-width: 100%;
+            text-transform: capitalize;
+            background-color: $mainColor;
+            margin-top: 0;
+            padding: 8px;
+            border-radius: 3px;
+            font-size: 22px;
+        }
+
+        &_message-empty {
+            display: block;
+            color: #fff;
+            font-size: 15px;
+            text-align: center;
+            border-bottom: 1px solid #434343;
+            margin-bottom: 20px;
+            padding-bottom: 5px;
+        }
+
+        &_total {
+            margin-top: 25px;
+            display: flex;
+            justify-content: space-between;
+
+            &_text {
+                color: #fff;
+                text-transform: capitalize;
+                font-size: 18px;
+            }
+
+            &_price {
+                color: $mainColor;
+                font-size: 18px;
+            }
+        }
+
+        &_cart-content {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+
+            &_order {
+                display: flex;
+                align-items: center;
+                gap: 30px;
+                background-color: $bgCard;
+                padding: 8px;
+                border-radius: 3px;
+
+                &_image {
+                    border: 1px solid $mainColor;
+                    display: flex;
+                    align-items: center;
+                    padding: 8px;
+                    border-radius: 50%;
+
+                    img {
+                        width: 35px;
+                        padding: 0;
+                    }
+                }
+
+                &_title-order {
+                    color: #fff;
+                    text-transform: capitalize;
+                    font-size: 15px;
+                }
+
+                &_price-order {
+                    color: $mainColor;
+                    font-size: 14px;
+                }
+
+                &_delete-order {
+                    color: $offers;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

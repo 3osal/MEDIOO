@@ -1,0 +1,23 @@
+.more-about {
+    margin: 100px 0;
+
+    .grid {
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        gap: 20px;
+
+        @include breakpoints(mobile) {
+            grid-template-columns: auto;
+        }
+
+        @include breakpoints(tablet) {
+            grid-template-columns: auto auto;
+        }
+
+        .card {
+            @include breakpoints(mobile) {
+                max-width: 200px;
+            }
+        }
+    }
+}

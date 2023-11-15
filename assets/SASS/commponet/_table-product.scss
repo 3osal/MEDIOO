@@ -1,0 +1,35 @@
+.table-product {
+    margin-top: 100px;
+    & table {
+        width: 100%;
+        border-collapse: collapse;
+        border-radius: 5px;
+        padding: 10px;
+        background-color: $bgCard;
+        font-size: 20px;
+        font-weight: 600;
+        text-transform: capitalize;
+        padding: 5px 10px;
+        margin: auto;
+        background-color: $bgCard;
+
+        @include breakpoints(mobile) {
+            font-size: 10px;
+            width: 250px;
+        }
+
+        & td {
+            color: #fff;
+            padding: 10px;
+            width: 500px;
+            border: 1px solid #31313156;
+            &:hover {
+                color: $mainColor;
+            }
+        }
+
+        & tr:hover {
+            background-color: #393E46;
+        }
+    }
+}

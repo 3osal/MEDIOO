@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    transition: $transition;
+}
+
+body {
+    background-color: $primaryColor;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 600;
+    color: #fff;
+}
+
+p {
+    color: $textcolor;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+@mixin center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-container {
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+
+.mySwiper {
+    max-width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.swiper-wrapper {
+    font-size: 18px;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    padding: 20px 10px;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main-title {
+    color: #fff;
+    text-transform: capitalize;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: -7px;
+        top: 10px;
+        width: 4px;
+        height: 20px;
+        background-color: $mainColor;
+    }
+}
